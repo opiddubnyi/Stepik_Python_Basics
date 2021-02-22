@@ -72,11 +72,11 @@ def create(_name, _arg):
     if _arg not in namespace.keys():
         namespace[_arg] = [_name]
 
-    # if parent is present in keys -> create namespace dictionary inside parent
+    # if parent is present in keys -> add namespace inside parent array
     if _arg in namespace.keys():
         namespace[_arg].append(_name)
 
-    # if present and we need to add another namesp-arg pair:
+    # if not present and we need to add another namesp-arg pair:
     if _arg in namespace.keys() and _name not in namespace.keys():
         namespace[_name] = [_arg]
 
